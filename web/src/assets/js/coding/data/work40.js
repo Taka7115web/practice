@@ -184,7 +184,6 @@ function func() {
 
       draw() {
         this.wall_crush();
-        this.circle_scatter();
         p.drawingContext.fillStyle = this.color;
         p.ellipse(this.current_x, this.current_y, this.w, this.h);
       }
@@ -213,16 +212,6 @@ function func() {
 
           }, // 処理後じ実行する関数を指定
         });
-
-      }
-
-      circle_scatter() {
-
-        p.drawingContext.fillStyle = "#fff";
-        p.ellipse(this.current_x - 5, this.current_y, this.w / 5, this.h / 5);
-        p.ellipse(this.current_x - 10, this.current_y, this.w / 5, this.h / 5);
-        p.ellipse(this.current_x + 5, this.current_y, this.w / 5, this.h / 5);
-        p.ellipse(this.current_x + 5, this.current_y, this.w / 5, this.h / 5);
 
       }
 

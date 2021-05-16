@@ -34,18 +34,115 @@
 
       <template slot="mainCont">
         <!-- kvに入るhtmlを記述 -->
+        <div id="js-area" class="area"></div>
       </template>
 
       <template slot="html">
-        <!-- ソースとしてhtmlを記述 -->
+        &lt;div id="js-area" class="area"&gt;&lt;/div&gt;
       </template>
 
       <template slot="css">
-        <!-- ソースとしてcssを記述 -->
+        .area {
+          width: 100%;
+          height: 100%;
+          cursor: pointer;
+        }
+
+        .circle {
+          transition: 1s;
+        }
       </template>
 
       <template slot="js">
-        <!-- ソースとしてjavascriptを記述 -->
+        var canvas = document.querySelector('#js-area');
+        var data_canvas = {
+        w: canvas.clientWidth,
+        h: canvas.clientHeight
+        }
+
+        var center = {
+        x: data_canvas.w / 2,
+        y: data_canvas.h / 2
+        }
+
+        // circle変数格納用配列
+        var circle_arr = [];
+
+        // ランダムな整数を算出
+        var return_random_integer = (num) =&gt; {
+        return Math.floor(Math.random() * num);
+        }
+
+        //SVGインスタンス
+        var canvas = SVG('js-area');
+        canvas.size(data_canvas.w, data_canvas.h).attr({
+        id: 'svg'
+        });
+
+        //クラス particle
+        class Particle {
+        constructor(w, h, fill, stroke) {
+        this.w = w;
+        this.h = h;
+        this.fill = fill;
+        this.stroke = stroke;
+        this.radian = return_random_integer(360) * (Math.PI / 180);
+        this.posX = ((data_canvas.h / 4) * Math.cos(this.radian)) + center.x;
+        this.posY = ((data_canvas.h / 4) * Math.sin(this.radian)) + center.y;
+        }
+        // circleを描画
+        draw() {
+        this.circle = canvas.circle(this.w, this.h).move(this.posX,
+        this.posY).fill(this.fill).stroke(this.stroke).attr({
+        id: 'circle'
+        }).attr({
+        class: 'circle'
+        });
+        }
+        // circleの座標を変更
+        change_pos() {
+        this.newX = return_random_integer(data_canvas.w);
+        this.newY = return_random_integer(data_canvas.h);
+        this.circle.move(this.newX, this.newY);
+        }
+        // circleの座標をもとに戻す
+        reset_pos() {
+        this.circle.move(this.posX, this.posY)
+        }
+        }
+
+        // circleを配列に格納
+        for (let i = 0; i &lt; 100; i++) {
+        circle_arr.push(new Particle(10, 10, "yellow", "orange"))
+        }
+
+        // circle描画
+        circle_arr.forEach((el, i) =&gt; {
+        el.draw();
+        });
+
+        // clickイベント
+        canvas.on("click", () =&gt; {
+        move_circle();
+        });
+
+        // clickでcircleの座標変更
+        function move_circle() {
+        circle_arr.forEach((el, i) =&gt; {
+        el.change_pos();
+        });
+        }
+        // dblclickイベント
+        canvas.on("dblclick", () =&gt; {
+        reset_circle_pos();
+        });
+
+        // dblclickで元の座標に戻す
+        function reset_circle_pos() {
+        circle_arr.forEach((el, i) =&gt; {
+        el.reset_pos();
+        });
+        }
       </template>
     </page>
   </main>
@@ -89,7 +186,14 @@
 <!-- css manipulation ----------------------------------------- -->
 <style type="text/css">
   /* kvのhtmlをスタイリングするcssを記述 */
-
+  .area {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+  .circle {
+    transition: 1s;
+  }
 </style>
 
 <!-- call the common javascript ------------------------------------ -->

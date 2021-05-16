@@ -496,68 +496,400 @@
     "ja": "持っておくよりは、手放した方が良い",
     "example": ""
   },
-  "": {
-    "ja": "",
+  "pilgrimage": {
+    "ja": "巡礼",
     "example": ""
   },
-  "": {
-    "ja": "",
+  "strained": {
+    "ja": "緊張した、張りつめた",
     "example": ""
   },
-  "": {
-    "ja": "",
+  "appear to be": {
+    "ja": "～のようにみえる、～とみなされる",
     "example": ""
   },
-  "": {
-    "ja": "",
+  "mucas": {
+    "ja": "粘液",
     "example": ""
   },
-  "": {
-    "ja": "",
+  "pass off as": {
+    "ja": "～だと偽って・・・する。～を・・・にすり替える",
+    "example": "He tried to pass the fake Van Gogh off as the real thing."
+  },
+  "idiosyncrasy": {
+    "ja": "特質",
     "example": ""
   },
-  "": {
-    "ja": "",
+  "cavort with": {
+    "ja": "はしゃぎまわる",
+    "example": "It is very comforting to see little puppies cavorting with each other."
+  },
+  "uncanny": {
+    "ja": "不気味",
     "example": ""
   },
-  "": {
-    "ja": "",
+  "prim": {
+    "ja": "堅苦しい",
     "example": ""
   },
-  "": {
-    "ja": "",
+  "bastion": {
+    "ja": "要塞",
     "example": ""
   },
-  "": {
-    "ja": "",
+  "rupture": {
+    "ja": "破裂",
     "example": ""
   },
-  "": {
-    "ja": "",
+  "laughter": {
+    "ja": "笑い、笑い声",
     "example": ""
   },
-  "": {
-    "ja": "",
+  "encapsulate": {
+    "ja": "カプセル化",
     "example": ""
   },
-  "": {
-    "ja": "",
+  "roster": {
+    "ja": "名簿",
     "example": ""
   },
-  "": {
-    "ja": "",
+  "arduous": {
+    "ja": "辛い、苦しい",
     "example": ""
   },
-  "": {
-    "ja": "",
+  "take measure": {
+    "ja": "対策を講じる",
     "example": ""
   },
-  "": {
-    "ja": "",
+  "salmon skin roll": {
+    "ja": "外国でよく見る巻きずし",
     "example": ""
   },
-  "": {
-    "ja": "",
+  "crotch-kicking": {
+    "ja": "金玉蹴り",
+    "example": "In a boxing match, crotch-kicking and eyeball crushing is foul."
+  },
+  "I'd kill for money": {
+    "ja": "金のためならなんでもする",
+    "example": ""
+  },
+  "What have you been up to?": {
+    "ja": "今まで何してたー？",
+    "example": ""
+  },
+  "dirt cheap": {
+    "ja": "格安、ただ同然",
+    "example": ""
+  },
+  "inpuls buy": {
+    "ja": "衝動買い",
+    "example": ""
+  },
+  "shop around": {
+    "ja": "商品を見て回る",
+    "example": ""
+  },
+  "peasant dish": {
+    "ja": "農民食",
+    "example": ""
+  },
+  "nothing short of ～": {
+    "ja": "まさに～に他ならない",
+    "example": ""
+  },
+  "So be it.": {
+    "ja": "それならそれでよい、好きにするがよい",
+    "example": ""
+  },
+  "You lost me.": {
+    "ja": "あなたの言っていることが全く理解できない",
+    "example": ""
+  },
+  "tangy": {
+    "ja": "酸っぱい、鼻につんとくる、パンチの効いた味",
+    "example": ""
+  },
+  "hork down": {
+    "ja": "ガツガツ食べる",
+    "example": ""
+  },
+  "improvise": {
+    "ja": "即興で～する、取り繕う",
+    "example": ""
+  },
+  "analogy": {
+    "ja": "類推",
+    "example": ""
+  },
+  "self-proclaimed": {
+    "ja": "自称～",
+    "example": ""
+  },
+  "pushy": {
+    "ja": "でしゃばりの、強引な",
+    "example": ""
+  },
+  "trespass": {
+    "ja": "不法侵入",
+    "example": ""
+  },
+  "belittle": {
+    "ja": "見くびる、けなす",
+    "example": ""
+  },
+  "smack": {
+    "ja": "平手打ちする",
+    "example": ""
+  },
+  "ragtag": {
+    "ja": "ぼろい、みすぼらしい",
+    "example": ""
+  },
+  "mull over～": {
+    "ja": "～について熟考する",
+    "example": ""
+  },
+  "impeach": {
+    "ja": "弾劾する",
+    "example": ""
+  },
+  "I dig that!": {
+    "ja": "大好き！",
+    "example": ""
+  },
+  "Right on!": {
+    "ja": "その通り！",
+    "example": ""
+  },
+  "fidge": {
+    "ja": "（緊張などで）そわそわする、もじもじする",
+    "example": ""
+  },
+  "warranty": {
+    "ja": "保証",
+    "example": ""
+  },
+  "whirlwind": {
+    "ja": "旋風",
+    "example": ""
+  },
+  "offbeat": {
+    "ja": "変わった、普通と異なる",
+    "example": ""
+  },
+  "frivolous": {
+    "ja": "軽薄な、くだらない",
+    "example": ""
+  },
+  "Bulimia": {
+    "ja": "過食症",
+    "example": ""
+  },
+  "purge": {
+    "ja": "清める、一掃する",
+    "example": ""
+  },
+  "trifle": {
+    "ja": "些細なこと",
+    "example": ""
+  },
+  "nauseous": {
+    "ja": "吐き気",
+    "example": ""
+  },
+  "resonate": {
+    "ja": "共鳴する",
+    "example": ""
+  },
+  "treachery": {
+    "ja": "裏切り",
+    "example": ""
+  },
+  "citadel": {
+    "ja": "城塞",
+    "example": ""
+  },
+  "toil": {
+    "ja": "骨折って働く",
+    "example": ""
+  },
+  "spire": {
+    "ja": "尖塔",
+    "example": ""
+  },
+  "nestle on": {
+    "ja": "気持ちよく横たわる、快く身を落ち着ける",
+    "example": ""
+  },
+  "buzzing": {
+    "ja": "にぎやか",
+    "example": ""
+  },
+  "submerge": {
+    "ja": "沈める",
+    "example": ""
+  },
+  "hardball": {
+    "ja": "挑戦的な戦術",
+    "example": ""
+  },
+  "faucet": {
+    "ja": "蛇口",
+    "example": ""
+  },
+  "get in line": {
+    "ja": "列に並ぶ",
+    "example": ""
+  },
+  "hypothetically": {
+    "ja": "仮説上は",
+    "example": ""
+  },
+  "swine": {
+    "ja": "豚、卑劣なやつ",
+    "example": ""
+  },
+  "get in the habit of ~": {
+    "ja": "～の習慣を身に着ける",
+    "example": ""
+  },
+  "Seize your moment!": {
+    "ja": "今だ！いけ！",
+    "example": ""
+  },
+  "take the liberty of ~": {
+    "ja": "勝手ながら～をする",
+    "example": ""
+  },
+  "Shame on you!": {
+    "ja": "恥を知れ！",
+    "example": ""
+  },
+  "That's more like it.": {
+    "ja": "その方がよい。よしよし。。",
+    "example": ""
+  },
+  "biometric": {
+    "ja": "生体認証",
+    "example": ""
+  },
+  "diaper": {
+    "ja": "おむつ",
+    "example": ""
+  },
+  "in one sitting": {
+    "ja": "一気に、一度に",
+    "example": ""
+  },
+  "contempt": {
+    "ja": "軽蔑",
+    "example": ""
+  },
+  "preside over ~": {
+    "ja": "～を統括する",
+    "example": ""
+  },
+  "loose cannon": {
+    "ja": "危険人物",
+    "example": ""
+  },
+  "vernacular": {
+    "ja": "俗語",
+    "example": ""
+  },
+  "felony": {
+    "ja": "重罪",
+    "example": ""
+  },
+  "hazy": {
+    "ja": "かすんでいる",
+    "example": ""
+  },
+  "one-way-traffic": {
+    "ja": "一方通行",
+    "example": ""
+  },
+  "greasy": {
+    "ja": "あぶらっこい",
+    "example": ""
+  },
+  "ring a bell": {
+    "ja": "心当たりがある、思い出させる",
+    "example": ""
+  },
+  "calf": {
+    "ja": "ふくらはぎ",
+    "example": ""
+  },
+  "concede": {
+    "ja": "譲歩",
+    "example": ""
+  },
+  "relish": {
+    "ja": "風味、味わい",
+    "example": ""
+  },
+  "Back off!": {
+    "ja": "下がれ！",
+    "example": ""
+  },
+  "spooky": {
+    "ja": "不気味な",
+    "example": ""
+  },
+  "on-and-off": {
+    "ja": "不規則に。時々。",
+    "example": ""
+  },
+  "filth": {
+    "ja": "汚物",
+    "example": ""
+  },
+  "ins and outs": {
+    "ja": "（複雑な状況などの）一部始終、裏と表、内面と外面",
+    "example": ""
+  },
+  "potluck party": {
+    "ja": "持ち寄りパーティ",
+    "example": ""
+  },
+  "is ripe for ~": {
+    "ja": "～にうってつけ",
+    "example": ""
+  },
+  "get stuck in ~": {
+    "ja": "～に残る。～に詰まる。",
+    "example": ""
+  },
+  "an order of precedence": {
+    "ja": "優先順位。身分による席次。",
+    "example": ""
+  },
+  "in place": {
+    "ja": "所定の位置に。そこにあるべき。",
+    "example": ""
+  },
+  "is integral to ~": {
+    "ja": "～に必要不可欠な",
+    "example": ""
+  },
+  "quirky": {
+    "ja": "風変わりな。予測できない。",
+    "example": ""
+  },
+  "distant memory": {
+    "ja": "遠い記憶",
+    "example": ""
+  },
+  "whip up ~": {
+    "ja": "(馬や人に)鞭を打って駆り立てる。(料理などを)手早く作る。",
+    "example": ""
+  },
+  "from scratch": {
+    "ja": "最初から。0から。",
+    "example": ""
+  },
+  "sanitize": {
+    "ja": "消毒する",
     "example": ""
   },
   "": {
