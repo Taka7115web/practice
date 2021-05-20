@@ -1,0 +1,89 @@
+<div class="m-menuBtn js-menu-btn">
+  <div class="m-menuBtn__wrap">
+    <hr />
+    <hr />
+    <hr />
+  </div>
+</div>
+
+
+<!-- .m-menuBtn {
+  @include pc {
+    display: none;
+  }
+  @include sp {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 120/750*100vw;
+    height: 120/750*100vw;
+    background-color: $main_color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+  }
+  &__wrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+    transition: 1s;
+    hr {
+      width: 45%;
+      margin: 0 auto;
+      border-top: 2px solid #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: 1s;
+      &:nth-of-type(1) {
+        margin-top: -15%;
+        .is_close &{
+          margin-top: 0;
+          transform:  translate(-50%, -50%) rotate(45deg);
+        }
+      }
+      &:nth-of-type(2) {
+        .is_close &{
+          opacity: 0;
+          transform: translate(-90%, -50%);
+        }
+      }
+      &:nth-of-type(3) {
+        margin-top: 15%;
+
+        .is_close &{
+          margin-top: 0;
+          transform:  translate(-50%, -50%) rotate(-45deg);
+        }
+      }
+    }
+  }
+} -->
+
+
+
+<!-- class Menu {
+  constructor() {
+    this.btn = document.querySelector(".js-menu-btn");
+  }
+  init() {
+
+      if (window.innerWidth < 750 && this.btn) {
+      this.activate();
+    }
+
+  }
+
+  activate() {
+    this.btn.addEventListener("click",(e)=>{
+      e.currentTarget.classList.toggle("is_close");
+    });
+  }
+
+}
+
+export default Menu; -->

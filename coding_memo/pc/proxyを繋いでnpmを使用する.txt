@@ -1,0 +1,15 @@
+①自分のPCのIPアドレスを確認
+→コマンドプロンプトで"ipconfig"叩く
+→IPv4 アドレスの値がIPアドレス　　例）192.168.1.15
+
+②空いているport番号を調べる
+→コマンドプロンプトで"netstat -na"叩く
+→ローカルアドレス列の"Listening(接続待ち)"の:○○○の○○○が空いているport　例）3000
+
+③ターミナルで下記叩く
+$ npm -g config set proxy 192.168.1.15:3000
+$ npm -g config set https-proxy 192.168.1.15:3000
+$ npm -g config set registry http://registry.npmjs.org/
+$ npm config list もしくはnpm config ls -lで確認
+
+④これでproxyがつながった

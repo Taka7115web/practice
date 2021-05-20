@@ -1,0 +1,5 @@
+■cssのcontentプロパティの文字列を改行するとき
+※\A→<br>と同じ働き
+
+content: 'Sử dụng an toàn trong \Alò vi sóng';
+white-space: pre;

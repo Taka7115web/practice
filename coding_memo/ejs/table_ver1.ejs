@@ -1,0 +1,94 @@
+<!-- border-collapse: separate;
+border-spacing: 0px;
+をtable要素に指定しないとChromeでborderが効かない -->
+
+
+<table width="100%" cellspacing="0" cellpadding="0" border="0" class="table">
+  <tbody>
+    <tr class="bg">
+      <th width="30%">カテゴリ1</th>
+      <th width="60%">カテゴリ2</th>
+      <th width="10%">カテゴリ3</th>
+    </tr>
+    <tr>
+      <td rowspan="4" class="bb bt">タイトル1</td>
+      <td class="bt">テキスト1</td>
+      <td rowspan="2" class="bb bt">補足1</td>
+    </tr>
+    <tr>
+      <td class="bb pt0">テキスト2</td>
+    </tr>
+    <tr>
+      <td>テキスト3</td>
+      <td rowspan="2" class="bb">補足2</td>
+    </tr>
+    <tr>
+      <td class="bb pt0">テキスト4</td>
+    </tr>
+    <tr>
+      <td rowspan="2" class="bb">タイトル2</td>
+      <td>テキスト5</td>
+      <td rowspan="2" class="bb">補足3</td>
+    </tr>
+    <tr>
+      <td class="bb pt0">テキスト6</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+& .table {
+  margin-top: 25px;
+  border-collapse: separate;
+  border-spacing: 0px;
+
+  @include sp {
+    margin-top: 40/750*100vw;
+  }
+
+
+  & tr {
+    &.bg {
+      background-color: #E5E5E5;
+    }
+  }
+
+  & th {
+    text-align: left;
+    padding: 8px 20px;
+    letter-spacing: 0;
+
+    @include sp {
+      @include vw(24);
+      padding: 20/750*100vw;
+      white-space: nowrap;
+    }
+  }
+
+  & td {
+    vertical-align: top;
+    padding: 8px 20px;
+    letter-spacing: 0;
+
+    @include sp {
+      @include vw(24);
+      padding: 20/750*100vw;
+      white-space: nowrap;
+    }
+
+    &.bt {
+      border-top: 1px solid #ACACAC;
+    }
+
+    &.bb {
+      border-bottom: 1px solid #c9c9c9;
+    }
+
+    &.pt0 {
+      padding-top: 0;
+    }
+  }
+
+}

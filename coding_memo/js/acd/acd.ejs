@@ -1,0 +1,50 @@
+<div class="m-acd">
+  <% var itemList = [
+                        {
+                            quesTxt: '誰でも参加できますか？',
+                            ansTxt1: 'テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。',
+                        },
+                        {
+                            quesTxt: 'チケットの購入は必要ですか？',
+                            ansTxt1: 'テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。'
+                        }
+                    ] %>
+
+                    <% var count = 1; %>
+  <% itemList.forEach(function(item,key){%>
+  <div class="m-acd__cont">
+    <div class="m-acd__ques js-ques">
+      <div class="m-acd__q">
+        <img src="<%-conf.path.img%>top/ques_q.svg" alt="Q">
+      </div>
+      <div class="m-acd__quesArea">
+        <p class="m-acd__ttl">
+          <%- item.quesTxt %>
+        </p>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" class="m-acd__plusArea">
+        <g transform="translate(-1061 -7545)">
+          <path d="M0,0H21" transform="translate(1061 7555.5)" fill="none" stroke="#464646" stroke-width="2" class="js-minus" />
+          <path d="M0,0H21" transform="translate(1071.5 7545) rotate(90)" fill="none" stroke="#464646" stroke-width="2"
+          class="js-plus"
+            />
+        </g>
+      </svg>
+
+    </div>
+
+    <div class="m-acd__ans js-ans">
+        <div class="m-acd__wrap">
+          <div class="m-acd__ansArea">
+            <p class="m-acd__txt">
+              <%- item.ansTxt1 %>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <% count++; %>
+    <% }); %>
+
+  </div>

@@ -1,0 +1,169 @@
+@charset "utf-8";
+
+
+.m-acd {
+  margin: 0 auto;
+
+  &__cont {
+    background-color: #fff;
+    &:not(:nth-of-type(1)){
+      margin-top: 10px;
+    }
+
+    @include sp {
+      &:not(:nth-of-type(1)){
+        margin-top: 10/750*100vw;
+      }
+    }
+  }
+
+  &__ques {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    padding: 25px 35px;
+
+    @include sp {
+      padding: 35/750*100vw 100/750*100vw 35/750*100vw 40/750*100vw;
+    }
+  }
+
+  &__ans {
+    display: none;
+    padding: 0 70px 30px 92px;
+
+    @include sp {
+      padding: 0 50/750*100vw 30/750*100vw 115/750*100vw;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: flex-start;
+
+    &--center {
+      align-items: center;
+    }
+  }
+
+  &__q {
+    width: 33px;
+    height: auto;
+    border-radius: .5em;
+    margin-right: 25px;
+    display: flex;
+    align-items: center;
+
+    @include sp {
+      width: 51/750*100vw;
+      margin-right: 30/750*100vw;
+    }
+
+    &--white {
+      background-color: #fff;
+    }
+  }
+
+  &__num {
+    margin: 0 auto;
+    font-size: 23px;
+    font-weight: bold;
+    color: #fff;
+
+    @include sp {
+      @include vw(28);
+
+    }
+
+    &--red {
+      color: #FE0400;
+    }
+  }
+
+  &__quesArea {
+    @include sp {
+      width: 500/750*100vw;
+    }
+  }
+
+  &__ansArea {
+    width: 666px;
+
+    @include sp {
+      width: 500/750*100vw;
+    }
+  }
+
+  &__ttl {
+    font-size: rem(18);
+    font-weight: 500;
+
+    @include sp {
+      @include vw(28);
+    }
+  }
+
+  &__txt {
+    font-size: rem(16);
+    text-align: justify;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+
+      @include sp {
+        margin-bottom: 16/750*100vw;
+      }
+    }
+
+    @include sp {
+      @include vw(26);
+    }
+
+    & a {
+      text-decoration: underline;
+      color: #186cc2;
+
+      &:visited {
+        color: #6e0672;
+      }
+    }
+
+    & span {
+      font-size: 16px;
+      font-weight: bold;
+
+      @include sp {
+        @include vw(22);
+      }
+    }
+  }
+
+  &__miniTxt {
+    font-size: 14px;
+
+    @include sp {
+      @include vw(18);
+    }
+  }
+
+  &__plusArea {
+    width: 26px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+
+    @include sp {
+      width: 35/750*100vw;
+      right: 30 /750*100vw;
+    }
+  }
+}
+
+
+.acd-hide {
+  display: none;
+}

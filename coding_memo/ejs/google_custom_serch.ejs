@@ -1,0 +1,39 @@
+
+■Googleサイト内検索(独自ボックス&検索結果ページ)
+
+①下記ページで新規作成
+https://cse.google.co.jp/cse/all
+
+②デザイン＞レイアウト＞2ページ＞保存してコードを取得
+
+③検索ボックスコードを取得して下記htmlのように
+発行コードのcx=●●●の●●●の部分をvalueとしてinputに設置
+
+④検索結果の詳細＞
+検索結果を表示したいページのURLを設定
+クエリパラメーターはtype="search"のinputのname属性に設定
+
+⑤検索結果コードの取得＞表示されているコードを
+検索結果ページの表示したい箇所に埋め込み
+
+
+
+
+<!-- 検索ボックス -->
+<form action="/search/" method="get" class="">
+  <div class="">
+    <input type="submit" class="js-icon" value="">
+    <input type="hidden" name="cx" value="a396fe92d36c7574c" />
+    <input type="search" name="q" placeholder="ENHANCED BY Google" class="js-serch">
+  </div>
+</form>
+
+<!-- 検索結果部分 -->
+<script async src="https://cse.google.com/cse.js?cx=a396fe92d36c7574c"></script>
+<div class="gcse-searchresults-only"></div>
+
+<!-- figure&figcaption -->
+<figure class="service__img">
+  <img src="<%-conf.path.img%>common/" alt="">
+  <figcaption class="service__txt"></figcaption>
+</figure>
