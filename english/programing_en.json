@@ -63,112 +63,121 @@
     "ja": "浮動小数点値(小数)",
     "example": ""
   },
+<<<<<<< HEAD
   "fine-tune": {
     "ja": "微調整する",
+=======
+  "algebra": {
+    "ja": "代数",
+>>>>>>> a80894e73bf6018e15dbec7f7c03c6c8857a92bd
     "example": ""
   },
-  "": {
-    "ja": "",
+  "associative array": {
+    "ja": "連想配列",
     "example": ""
   },
-  "": {
-    "ja": "",
+  "assign": {
+    "ja": "代入する",
     "example": ""
   },
-  "": {
-    "ja": "",
+  "incorporate ": {
+    "ja": "組み込む",
     "example": ""
   },
-  "": {
-    "ja": "",
+  "concatenate ": {
+    "ja": "連結する",
     "example": ""
   },
-  "": {
-    "ja": "",
+  "convention": {
+    "ja": "慣例。しきたり",
     "example": ""
   },
-  "": {
-    "ja": "",
+  "evaluate": {
+    "ja": "(式を)評価する。実行する",
     "example": ""
   },
-  "": {
-    "ja": "",
+  "the less than operator": {
+    "ja": "<",
     "example": ""
   },
-  "": {
-    "ja": "",
+  "the greater than operator": {
+    "ja": ">",
     "example": ""
   },
-  "": {
-    "ja": "",
+  "The less than or equal to operator": {
+    "ja": "<=",
     "example": ""
   },
-  "": {
-    "ja": "",
+  "The greater than or equal to operator": {
+    "ja": ">=",
     "example": ""
   },
-  "": {
-    "ja": "",
+  "the identical operator": {
+    "ja": "===",
     "example": ""
   },
-  "": {
-    "ja": "",
+  "the not identical operator": {
+    "ja": "!==",
     "example": ""
   },
-  "": {
-    "ja": "",
+  "the equal operator": {
+    "ja": "==",
     "example": ""
   },
-  "": {
-    "ja": "",
+  "Separation of concerns": {
+    "ja": "関心の分離（ソフトウェア工学語）",
     "example": ""
   },
-  "": {
-    "ja": "",
+  "modularity": {
+    "ja": "モジュール性",
+    "example": "Modularity is the idea of separating a program into distinct, manageable chunks where each provides a piece of the overall functionality"
+  },
+  "decimal point": {
+    "ja": "小数点",
     "example": ""
   },
-  "": {
-    "ja": "",
+  "modulo": {
+    "ja": "余剰",
+    "example": "The modulo is the remainder after the left operand is divided by the right operand."
+  },
+  "modulo operator": {
+    "ja": "%(モジュロオペレーター)。",
+    "example": "The modulo operator returns the remainder after the left operand is divided by the right operand."
+  },
+  "arithmetic": {
+    "ja": "算術",
     "example": ""
   },
-  "": {
-    "ja": "",
+  "yield": {
+    "ja": "生み出す。もたらす。屈する。",
     "example": ""
   },
-  "": {
-    "ja": "",
+  "Regex": {
+    "ja": "正規表現",
+    "example": "Regex is same meaning as a regular expression. A regular expression is a sequence of characters representing a pattern."
+  },
+  "applet": {
+    "ja": "アプリケーションの中に組み込まれて実行される小さなプログラム",
     "example": ""
   },
-  "": {
-    "ja": "",
+  "digits": {
+    "ja": "数字",
     "example": ""
   },
-  "": {
-    "ja": "",
+  "hat": {
+    "ja": "^",
+    "example": "In regex, the ^ ensures that the matched text begins with the word right after ^, and the $ ensures the matched text ends with the word right before $."
+  },
+  "dollar sign": {
+    "ja": "$",
+    "example": "In regex, the ^ ensures that the matched text begins with the word right after ^, and the $ ensures the matched text ends with the word right before $."
+  },
+  "man-in-the middle attack": {
+    "ja": "中間者攻撃",
     "example": ""
   },
-  "": {
-    "ja": "",
-    "example": ""
-  },
-  "": {
-    "ja": "",
-    "example": ""
-  },
-  "": {
-    "ja": "",
-    "example": ""
-  },
-  "": {
-    "ja": "",
-    "example": ""
-  },
-  "": {
-    "ja": "",
-    "example": ""
-  },
-  "": {
-    "ja": "",
+  "sanitizing(sanitization)": {
+    "ja": "コード無害化",
     "example": ""
   },
   "": {
