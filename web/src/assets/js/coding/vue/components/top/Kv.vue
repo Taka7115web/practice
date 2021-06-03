@@ -7,6 +7,9 @@
   <!-- プログラムは思った通りに動かない。書いた通りに動く。 -->
 
   <section class="c-kv">
+    <div class="c-kv__img">
+      <img src="/assets/img/coding/logo.svg" alt="" />
+    </div>
     <h1 class="c-kvH1">
       HTML、CSS、JavaScriptを使用したコーディング作品集。芸術的かつ機能的なコーディングは、あなたのWeb制作のスキルアップに繋がるはずです。ぜひ参考に！
     </h1>
@@ -45,16 +48,15 @@
       </g>
     </svg>
 
-    <div class="canvas-parent" id="parent">
+    <!-- <div class="canvas-parent" id="parent">
       <canvas id="myCanvas"></canvas>
-    </div>
+    </div> -->
   </section>
 </template>
 
 
 
 <script>
-
 </script>
 
 
@@ -62,5 +64,8 @@
 .canvas-parent {
   width: 100%;
   height: 100%;
+}
+.c-kv__img {
+  width: 70px;
 }
 </style>

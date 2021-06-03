@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="510.5" height="510.106" viewBox="0 0 510.5 510.106">
+  <g id="logo_complete_ol_2" transform="translate(-546 -327.5)">
+    <g id="bg" transform="translate(0 3)">
+      <path id="sky" d="M0,0H250V501H0Z" transform="translate(801 329)" fill="#c6ffff"/>
+      <g id="sunset" transform="translate(551 329)" fill="#ffd120">
+        <path d="M 249.5 337.5 L 0.5 337.5 L 0.5 0.5 L 249.5 0.5 L 249.5 337.5 Z" stroke="none"/>
+        <path d="M 1 1 L 1 337 L 249 337 L 249 1 L 1 1 M 0 0 L 250 0 L 250 338 L 0 338 L 0 0 Z" stroke="none" fill="#707070"/>
+      </g>
+      <path id="night" d="M0,0H250V251Z" transform="translate(551 329)" fill="#410081"/>
+      <path id="sea" d="M551,824.386V669.444l250.442-91.033V829.8Z" fill="#39caff"/>
+      <path id="mountain_down" d="M249.5,0C390.089,0,504.058,56.317,504.058,125.788S390.089,251.577,249.5,251.577Z" transform="translate(551.942 578.411)" fill="#98ff48"/>
+      <path id="mountain_shadow" d="M803.5,580.987V829.731s104.9,4.056,195.254-49.273Z" transform="translate(-2.058)" fill="#15d600"/>
+      <path id="mountain_top" d="M249.5,0C390.464,0,504.738,56.412,504.738,126S390.464,252,249.5,252Z" transform="translate(551.262 329.987)" fill="#98ff48"/>
+    </g>
+    <g id="A" transform="translate(551 581.754)">
+      <path id="パス_9" data-name="パス 9" d="M0,90,250,0" transform="translate(0 1)" fill="none" stroke="#bebebe" stroke-width="10"/>
+    </g>
+    <g id="B" transform="translate(796.246 327.591)">
+      <g id="パス_1" data-name="パス 1" transform="translate(-249.793 4.471)" fill="none" stroke-linecap="square">
+        <path d="M249.793-4.471C393.411-4.471,509.544,56.412,509.544,126S393.92,253.194,250.3,253.194Z" stroke="none"/>
+        <path d="M 259.8126220703125 5.635467529296875 L 260.2822875976563 243.0962066650391 C 390.9790649414063 240.5346221923828 499.5435180664063 187.9553833007813 499.5435180664063 125.9999847412109 C 499.5435180664063 63.44161987304688 388.6386413574219 8.372039794921875 259.8126220703125 5.635467529296875 M 249.7926025390625 -4.47088623046875 C 393.41064453125 -4.47088623046875 509.5435180664063 56.41215515136719 509.5435180664063 125.9999847412109 C 509.5435180664063 195.5878601074219 393.9202575683594 253.1939392089844 250.3022155761719 253.1939392089844 L 249.7926025390625 -4.47088623046875 Z" stroke="none" fill="#bebebe"/>
+      </g>
+      <g id="パス_2" data-name="パス 2" transform="translate(-249.5 247.946)" fill="none" stroke-linecap="square">
+        <path d="M249.5,0C392.956,0,509.251,57.537,509.251,128.512S392.956,262.054,249.5,262.054Z" stroke="none"/>
+        <path d="M 259.4999694824219 10.09881591796875 L 259.4999694824219 251.9452667236328 C 388.3363037109375 249.1454772949219 499.2508239746094 192.6690979003906 499.2508239746094 128.5120391845703 C 499.2508239746094 65.85981750488281 390.4639282226563 12.689208984375 259.4999694824219 10.09881591796875 M 249.4999694824219 0 C 392.9564208984375 0 509.2508544921875 57.53680419921875 509.2508544921875 128.5120391845703 C 509.2508544921875 199.4872131347656 392.9564208984375 262.0538940429688 249.4999694824219 262.0538940429688 L 249.4999694824219 0 Z" stroke="none" fill="#bebebe"/>
+      </g>
+    </g>
+    <g id="N" transform="translate(551.5 332.5)">
+      <path id="パス_5" data-name="パス 5" d="M500.5,499.593,0,0" transform="translate(0 0)" fill="none" stroke="#7e7e7e" stroke-width="10"/>
+      <path id="パス_6" data-name="パス 6" d="M499.606,0H0" transform="translate(500 0.5) rotate(90)" fill="none" stroke="#000" stroke-linecap="square" stroke-width="10"/>
+    </g>
+    <g id="T" transform="translate(551.5 332.5)">
+      <path id="パス_8" data-name="パス 8" d="M499.593,0H0" transform="translate(249.75 0.5) rotate(90)" fill="none" stroke="#7e7e7e" stroke-linecap="square" stroke-width="10"/>
+      <path id="パス_7" data-name="パス 7" d="M500,0H0" fill="none" stroke="#000" stroke-linecap="square" stroke-width="10"/>
+    </g>
+    <g id="L" transform="translate(551 333)">
+      <path id="パス_4" data-name="パス 4" d="M500.5,0H0" transform="translate(0 499.593)" fill="none" stroke="#000" stroke-linecap="square" stroke-width="10"/>
+      <path id="パス_3" data-name="パス 3" d="M499.593,0H0" transform="translate(0 0) rotate(90)" fill="none" stroke="#000" stroke-linecap="square" stroke-width="10"/>
+    </g>
+  </g>
+</svg>

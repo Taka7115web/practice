@@ -63,13 +63,8 @@
     "ja": "浮動小数点値(小数)",
     "example": ""
   },
-<<<<<<< HEAD
-  "fine-tune": {
-    "ja": "微調整する",
-=======
   "algebra": {
     "ja": "代数",
->>>>>>> a80894e73bf6018e15dbec7f7c03c6c8857a92bd
     "example": ""
   },
   "associative array": {
@@ -180,12 +175,16 @@
     "ja": "コード無害化",
     "example": ""
   },
-  "": {
-    "ja": "",
+    "fine-tune": {
+    "ja": "微調整する",
     "example": ""
   },
-  "": {
-    "ja": "",
+  "instantiati": {
+    "ja": "インスタンス化",
+    "example": ""
+  },
+  "object oriented programming": {
+    "ja": "オブジェクト思考プログラミング",
     "example": ""
   },
   "": {

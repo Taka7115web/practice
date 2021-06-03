@@ -239,6 +239,9 @@ exports["default"] = _default;
 //
 //
 //
+//
+//
+//
 
 
 /***/ }),
@@ -2443,39 +2446,6 @@ $({ target: 'Array', proto: true, forced: !HAS_SPECIES_SUPPORT || !USES_TO_LENGT
 
 /***/ }),
 
-/***/ "./node_modules/core-js/modules/es.function.name.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/core-js/modules/es.function.name.js ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var DESCRIPTORS = __webpack_require__(/*! ../internals/descriptors */ "./node_modules/core-js/internals/descriptors.js");
-var defineProperty = __webpack_require__(/*! ../internals/object-define-property */ "./node_modules/core-js/internals/object-define-property.js").f;
-
-var FunctionPrototype = Function.prototype;
-var FunctionPrototypeToString = FunctionPrototype.toString;
-var nameRE = /^\s*function ([^ (]*)/;
-var NAME = 'name';
-
-// Function instances `.name` property
-// https://tc39.github.io/ecma262/#sec-function-instances-name
-if (DESCRIPTORS && !(NAME in FunctionPrototype)) {
-  defineProperty(FunctionPrototype, NAME, {
-    configurable: true,
-    get: function () {
-      try {
-        return FunctionPrototypeToString.call(this).match(nameRE)[1];
-      } catch (error) {
-        return '';
-      }
-    }
-  });
-}
-
-
-/***/ }),
-
 /***/ "./node_modules/core-js/modules/es.object.define-property.js":
 /*!*******************************************************************!*\
   !*** ./node_modules/core-js/modules/es.object.define-property.js ***!
@@ -2590,7 +2560,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".canvas-parent[data-v-a86525fa] {\n  width: 100%;\n  height: 100%;\n}\n", ""]);
+exports.push([module.i, ".canvas-parent[data-v-a86525fa] {\n  width: 100%;\n  height: 100%;\n}\n.c-kv__img[data-v-a86525fa] {\n  width: 70px;\n}\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -97083,6 +97053,8 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("section", { staticClass: "c-kv" }, [
+    _vm._m(0),
+    _vm._v(" "),
     _c("h1", { staticClass: "c-kvH1" }, [
       _vm._v(
         "\n    HTML、CSS、JavaScriptを使用したコーディング作品集。芸術的かつ機能的なコーディングは、あなたのWeb制作のスキルアップに繋がるはずです。ぜひ参考に！\n  "
@@ -97152,9 +97124,7 @@ var render = function() {
           ]
         )
       ]
-    ),
-    _vm._v(" "),
-    _vm._m(0)
+    )
   ])
 }
 var staticRenderFns = [
@@ -97162,11 +97132,9 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "canvas-parent", attrs: { id: "parent" } },
-      [_c("canvas", { attrs: { id: "myCanvas" } })]
-    )
+    return _c("div", { staticClass: "c-kv__img" }, [
+      _c("img", { attrs: { src: "/assets/img/coding/logo.svg", alt: "" } })
+    ])
   }
 ]
 render._withStripped = true
@@ -115265,10 +115233,27 @@ function func() {
 "use strict";
 
 
+__webpack_require__(/*! core-js/modules/es.array.fill */ "./node_modules/core-js/modules/es.array.fill.js");
+
+__webpack_require__(/*! core-js/modules/es.array.for-each */ "./node_modules/core-js/modules/es.array.for-each.js");
+
+__webpack_require__(/*! core-js/modules/es.object.define-property */ "./node_modules/core-js/modules/es.object.define-property.js");
+
+__webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+
+__webpack_require__(/*! core-js/modules/web.timers */ "./node_modules/core-js/modules/web.timers.js");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
 var _default = {
   id: 42,
   ttl: "<span>C</span>anvasで<br class='u-sp'>【HTML5】",
@@ -115294,7 +115279,124 @@ var _default = {
 
 exports["default"] = _default;
 
-function func() {}
+function func() {
+  /**
+   * うにょうにょはPointクラスの
+   * this.speedとthis.random_numの値を変えることで
+   * 調整可能
+   */
+  var area, canvas, context; // canvas表示のエリア
+
+  area = document.querySelector(".js-area");
+  var area_width = area.clientWidth,
+      area_height = area.clientHeight; // load後、canvas要素生成&関数実行
+
+  window.addEventListener("load", function () {
+    canvas = document.getElementById("js-canvas");
+    canvas.width = area_width;
+    canvas.height = area_height;
+    context = canvas.getContext("2d");
+    init();
+  }); // パラメータ
+
+  var MAX = 10,
+      // ベジェ曲線上のポイントの数
+  circle = {
+    // うにょうにょ円のパラメータ
+    center: {
+      x: area_width / 2,
+      y: area_height / 2
+    },
+    color: 'rgb(0, 255, 0)',
+    alpha: .7,
+    radius: area_width / 5,
+    point: [],
+    redraw_speed: 45
+  }; // それぞれのpointを定義するクラス
+
+  var Point = /*#__PURE__*/function () {
+    function Point(c, r, rota) {
+      _classCallCheck(this, Point);
+
+      this.x, this.y;
+      this.center_X = c.x;
+      this.center_y = c.y;
+      this.radian = rota * (Math.PI / 180);
+      this.radius = r;
+      this.speed = Math.random() * 10 + 2; // 回転速度
+
+      this.random_num = Math.random() + 1; // pointの座標を微修正するための乱数
+
+      this.rota = 0;
+    }
+
+    _createClass(Point, [{
+      key: "update",
+      value: function update() {
+        var plus = Math.cos(this.rota * (Math.PI / 180)) * this.random_num;
+        this.radius += plus;
+        var cos = Math.cos(this.radian) * this.radius;
+        var sin = Math.sin(this.radian) * this.radius;
+        this.x = cos + this.center_X;
+        this.y = sin + this.center_y;
+        this.rota += this.speed;
+      }
+    }]);
+
+    return Point;
+  }();
+
+  var init = function init() {
+    var rota = Math.floor(360 / MAX);
+
+    for (var i = 0; i < MAX; i++) {
+      circle.point[i] = new Point(circle['center'], circle['radius'], rota * i);
+    }
+
+    update();
+  }; // パラメータ及びキャンバスの描画内容を更新する関数
+
+
+  var update = function update() {
+    // それぞれのpointのパラメータ更新
+    circle.point.forEach(function (el) {
+      el.update();
+    }); // キャンバスを描画
+
+    draw(circle); // 再起関数化（実行間隔は要調整）
+
+    setTimeout(update, circle.redraw_speed);
+  }; // キャンバス描画用関数
+
+
+  var draw = function draw(circle) {
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    drawCircle(circle['color'], circle['point'], circle['alpha']);
+  }; // うにょうにょ円描画用関数
+
+
+  var drawCircle = function drawCircle(color, point, alpha) {
+    context.fillStyle = color;
+    context.globalAlpha = alpha;
+    context.beginPath(); // control_xとcontrol_yはベジェ曲線描画用のquadraticCurveTo()で第3、第4引数に。コントロールポイントとして使用
+
+    var control_x1 = (point[0].x + point[MAX - 1].x) / 2;
+    var control_y1 = (point[0].y + point[MAX - 1].y) / 2;
+    context.moveTo(control_x1, control_y1); // point同士をベジェ曲線で結ぶ
+
+    for (var i = 0; i < MAX - 1; i++) {
+      var control_x = (point[i].x + point[i + 1].x) / 2;
+      var control_y = (point[i].y + point[i + 1].y) / 2; // quadraticCurveTo()でベジェ曲線を表現する
+
+      context.quadraticCurveTo(point[i].x, point[i].y, control_x, control_y);
+    } // 最初と最後のpointだけ別で結ぶ
+
+
+    context.quadraticCurveTo(point[i].x, point[i].y, control_x1, control_y1);
+    context.closePath();
+    context.fill();
+  };
+} // func
 
 /***/ }),
 
@@ -116937,8 +117039,6 @@ function func() {
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-__webpack_require__(/*! core-js/modules/es.function.name */ "./node_modules/core-js/modules/es.function.name.js");
-
 __webpack_require__(/*! core-js/modules/es.object.define-property */ "./node_modules/core-js/modules/es.object.define-property.js");
 
 Object.defineProperty(exports, "__esModule", {
@@ -116973,293 +117073,7 @@ var Canvas = /*#__PURE__*/function () {
 
   _createClass(Canvas, [{
     key: "init",
-    value: function init() {
-      this.top_kv();
-    }
-  }, {
-    key: "top_kv",
-    value: function top_kv() {
-      //親要素を取得
-      var parent = document.getElementById("parent"); // 親要素の幅と高さを変数化
-
-      var cW = parent.clientWidth;
-      var cH = parent.clientHeight; // OrbitControls用domElement変数
-
-      var domElement = document.getElementById("myCanvas");
-      var c_pos = {
-        angle: 45,
-        range: cW / cH,
-        near: 10,
-        far: 10000
-      }; // グローバルでの変数定義
-
-      var renderer, scene, camera, room, controls, directionalLight, ambientLight, pointLight, geometryList, material, mesh; // 部屋の奥行
-
-      var depth = cW; // 関数実行
-
-      setting();
-      scene_camera_light();
-      init();
-      animate();
-
-      function setting() {
-        // rendererインスタンス定義(canvas要素にWebGL使用定義)
-        renderer = new THREE.WebGLRenderer({
-          canvas: document.querySelector('#myCanvas'),
-          antialias: true
-        });
-        renderer.setPixelRatio(window.devicePixelRatio);
-        renderer.setSize(cW, cH);
-        renderer.setClearColor("#000", 0);
-        renderer.shadowMap.enabled = true;
-      }
-
-      ;
-
-      function scene_camera_light() {
-        // シーンを定義
-        scene = new THREE.Scene(); // カメラを定義
-
-        camera = new THREE.PerspectiveCamera(c_pos.angle, //カメラの画角
-        c_pos.range, //撮影結果の縦横比。別段指定がなければ、キャンバスの幅 / キャンバスの高さ
-        c_pos.near, //ニアークリップの距離。nearより近い領域は非表示
-        c_pos.far //ファークリップの距離。farより遠い領域は非表示
-        );
-        camera.position.set(0, 0, -depth);
-        camera.lookAt(new THREE.Vector3(0, 0, 0));
-        scene.add(camera); // 平行光源を定義
-
-        pointLight = new THREE.PointLight("#fff");
-        pointLight.castShadow = true;
-        pointLight.position.set(cW * .25, -cH * .25, -depth / 2);
-        pointLight.intensity = .3;
-        pointLight.distance = 1100; //光の届く距離
-
-        scene.add(pointLight); // 環境光源を定義
-
-        ambientLight = new THREE.AmbientLight("lightblue");
-        ambientLight.position.set(0, 0, -depth / 2);
-        ambientLight.intensity = .2;
-        scene.add(ambientLight); // mousedragで、カメラ位置変更
-
-        controls = new _OrbitControls.OrbitControls(camera, domElement);
-      }
-
-      function init(e) {
-        /**
-         * 部屋
-         */
-        var room = new THREE.Object3D();
-        scene.add(room);
-        /**
-         * 視点
-         */
-
-        function create_dot(sx, sy, r, px, py, pz, rx, ry, rz, c) {
-          var geometry = new THREE.SphereGeometry(sx, sy, r); // 平面
-
-          var material = new THREE.MeshPhongMaterial({
-            color: c,
-            emissive: c
-          });
-          var dot = new THREE.Mesh(geometry, material);
-          dot.receiveShadow = false;
-          dot.position.set(px, py, pz);
-          dot.rotation.set(rx, ry, rz);
-          dot.name = 'dot';
-          return dot;
-        }
-
-        room.add(create_dot(5, 5, 5, 0, 0, 0, 0, 0, 0, '#fff'));
-        /**
-         * 壁
-         */
-
-        function create_wall(sx, sy, px, py, pz, rx, ry, rz, c) {
-          var geometry = new THREE.PlaneGeometry(sx, sy); // 平面
-
-          var material = new THREE.MeshPhongMaterial({
-            color: c,
-            side: THREE.DoubleSide
-          });
-          var wall = new THREE.Mesh(geometry, material);
-          wall.position.set(px, py, pz);
-          wall.rotation.set(rx, ry, rz);
-          wall.name = 'wall';
-          return wall;
-        }
-        /**
-         * 壁
-         */
-
-
-        var wall_arr = [];
-        wall_arr.push(create_wall(cW, cH, 0, 0, 0, 0, 0, 0, '#999')); //正面
-
-        wall_arr.push(create_wall(cW, cH, 0, -cH / 2, -cH / 2, -Math.PI / 2, 0, 0, '#888')); //床
-
-        wall_arr.push(create_wall(cW, cH, 0, cH / 2, -cH / 2, Math.PI / 2, 0, 0, '#888')); //天井
-
-        wall_arr.push(create_wall(cH, cH, cW / 2, 0, -cH / 2, 0, -Math.PI / 2, 0, '#777')); // 右
-
-        wall_arr.push(create_wall(cH, cH, -cW / 2, 0, -cH / 2, 0, Math.PI / 2, 0, '#666')); // 左
-
-        for (var _i = 0, _wall_arr = wall_arr; _i < _wall_arr.length; _i++) {
-          var el = _wall_arr[_i];
-          room.add(el);
-        }
-
-        ;
-        /**
-         * モニター
-         */
-
-        function create_monitor(sx, sy, sz, px, py, pz, rx, ry, rz, c) {
-          var geometry = new THREE.BoxGeometry(sx, sy, sz); // 平面
-
-          var material = new THREE.MeshPhongMaterial({
-            specular: 0x666666,
-            shininess: 120,
-            emissive: c,
-            emissiveIntensity: 1 // metal:true,
-
-          });
-          var monitor = new THREE.Mesh(geometry, material);
-          monitor.receiveShadow = false;
-          monitor.position.set(px, py, pz);
-          monitor.rotation.set(rx, ry, rz);
-          monitor.matrixAutoUpdate = false;
-          monitor.name = 'monitor';
-          return monitor;
-        }
-        /**
-         * 正面モニター
-         */
-
-
-        var front_moni_arr = [];
-        front_moni_arr.push(create_monitor(rt.moni_size(cW), rt.moni_size(cH), 20, rt.moni_x(cW, -1), rt.moni_y(cH, 1), 5, 0, 0, 0, '#43F2FF')); //左上
-
-        front_moni_arr.push(create_monitor(rt.moni_size(cW), rt.moni_size(cH), 20, rt.moni_x(cW, 1), rt.moni_y(cH, 1), 5, 0, 0, 0, '#00FFA2')); //右上
-
-        front_moni_arr.push(create_monitor(rt.moni_size(cW), rt.moni_size(cH), 20, rt.moni_x(cW, -1), rt.moni_y(cH, -1), 5, 0, 0, 0, '#0099FF')); //右下
-
-        front_moni_arr.push(create_monitor(rt.moni_size(cW), rt.moni_size(cH), 20, rt.moni_x(cW, 1), rt.moni_y(cH, -1), 5, 0, 0, 0, '#43F2FF')); //左下
-
-        for (var _i2 = 0, _front_moni_arr = front_moni_arr; _i2 < _front_moni_arr.length; _i2++) {
-          var el = _front_moni_arr[_i2];
-          room.add(el);
-        }
-
-        ;
-        /**
-         * 天井モニター
-         */
-
-        var ceiling_moni_arr = [];
-        ceiling_moni_arr.push(create_monitor(rt.moni_size(cW), rt.moni_size(cH), 20, rt.moni_x(cW, -1), cH / 2, -cH / 2, -Math.PI / 2, 0, 0, '#43F2FF')); //左
-
-        ceiling_moni_arr.push(create_monitor(rt.moni_size(cW), rt.moni_size(cH), 20, rt.moni_x(cW, 1), cH / 2, -cH / 2, -Math.PI / 2, 0, 0, '#43F2FF')); //左
-
-        for (var _i3 = 0, _ceiling_moni_arr = ceiling_moni_arr; _i3 < _ceiling_moni_arr.length; _i3++) {
-          var el = _ceiling_moni_arr[_i3];
-          room.add(el);
-        }
-
-        ;
-        /**
-         * 左壁モニター
-         */
-
-        var left_moni_arr = [];
-        left_moni_arr.push(create_monitor(cH * 2 / 3, rt.moni_size(cH), 20, -cW / 2, rt.moni_y(cH, 1), -cH / 2, 0, -Math.PI / 2, 0, '#43F2FF')); //上
-
-        left_moni_arr.push(create_monitor(cH * 2 / 3, rt.moni_size(cH), 20, -cW / 2, rt.moni_y(cH, -1), -cH / 2, 0, -Math.PI / 2, 0, '#43F2FF')); //下
-
-        for (var _i4 = 0, _left_moni_arr = left_moni_arr; _i4 < _left_moni_arr.length; _i4++) {
-          var el = _left_moni_arr[_i4];
-          room.add(el);
-        }
-
-        ;
-        /**
-         * 右壁モニター
-         */
-
-        var right_moni_arr = [];
-        right_moni_arr.push(create_monitor(cH * 2 / 3, rt.moni_size(cH), 20, cW / 2, rt.moni_y(cH, 1), -cH / 2, 0, -Math.PI / 2, 0, '#43F2FF')); //上
-
-        right_moni_arr.push(create_monitor(cH * 2 / 3, rt.moni_size(cH), 20, cW / 2, rt.moni_y(cH, -1), -cH / 2, 0, -Math.PI / 2, 0, '#43F2FF')); //下
-
-        for (var _i5 = 0, _right_moni_arr = right_moni_arr; _i5 < _right_moni_arr.length; _i5++) {
-          var el = _right_moni_arr[_i5];
-          room.add(el);
-        }
-
-        ;
-        /**
-         * 机
-         */
-
-        function create_desk(sx, sy, sz, px, py, pz, rx, ry, rz, c) {
-          var geometry = new THREE.BoxGeometry(sx, sy, sz); // 平面
-
-          var material = new THREE.MeshPhongMaterial({
-            color: c // specular: 0x666666,
-            // shininess: 120,
-            // emissive: c,
-            // emissiveIntensity: 1,
-            // metal:true,
-
-          });
-          var desk = new THREE.Mesh(geometry, material);
-          desk.receiveShadow = false;
-          desk.position.set(px, py, pz);
-          desk.rotation.set(rx, ry, rz);
-          desk.name = 'desk';
-          return desk;
-        }
-
-        room.add(create_desk(cW * 3 / 5, cH / 20, cH * 3 / 4, 0, -cH / 2 + cH / 20, -cH / 2 - cH / 4 / 2, 0, 0, 0, 'yellow'));
-        /**
-         * イス
-         */
-
-        /**
-         * テキストの描画
-         */
-
-        /**
-         * 線の描画
-         */
-        // const material = new THREE.LineBasicMaterial( { color: 0x0000ff } );
-        //       const points = [];
-        // points.push( new THREE.Vector3( - 10, 0, 0 ) );
-        // points.push( new THREE.Vector3( 0, 10, 0 ) );
-        // points.push( new THREE.Vector3( 10, 0, 0 ) );
-        // const chair = new THREE.BufferGeometry().setFromPoints( points );
-        // const line = new THREE.Line( chair, material );
-        // room.add(line);
-
-        console.log(room);
-        console.log(room.monitor);
-        console.log(scene);
-      }
-
-      ;
-      /**
-       *  常に連続的に描画するためのアニメーション関数
-       */
-
-      function animate(e) {
-        // rendererインスタンスにシーンとカメラを渡し、レンダリング
-        renderer.render(scene, camera); // mousedragでカメラ位置変更
-
-        controls.update(); // animate()関数を連続実行
-
-        requestAnimationFrame(animate);
-      }
-    }
+    value: function init() {}
   }]);
 
   return Canvas;
